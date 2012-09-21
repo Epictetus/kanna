@@ -7,4 +7,6 @@ module Pera
   configure do |config|
     config.phonegap_path = File.join('~', 'install', 'phonegap-2.0.0')
   end
+
+  require "pera/railtie"
 end
