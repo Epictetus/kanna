@@ -7,9 +7,9 @@ Gem::Specification.new do |gem|
   gem.name          = "pera"
   gem.version       = Pera::VERSION
   gem.authors       = ["Akihiro Matsumura"]
-  gem.email         = ["matsumura.aki@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.email         = ["mat_aki@sonicgarden.jp"]
+  gem.description   = %q{Pera connect Rails and Cordova. Pera is framework to create mobile application very simple.}
+  gem.summary       = %q{Simple Mobile App Framework for Rails}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
