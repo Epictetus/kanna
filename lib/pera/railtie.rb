@@ -16,5 +16,9 @@ module Pera
         app.config.middleware.use Rack::Static, urls: ['/www'], root: "app/pera"
       end
     end
+
+    rake_tasks do
+      load "pera/tasks/pera.rake"
+    end
   end
 end

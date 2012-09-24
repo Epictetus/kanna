@@ -2,7 +2,6 @@
 TODO
 ----------------------------------------
 
-ビルドのrakeタスク
 jsの共通部分の移植
 
 cookieの保存
@@ -21,3 +20,4 @@ ControllerでのViewのハンドリング
 app/pera の配信
 * guardの仕組み
 * config/enviroments/development.rb
+ビルドのrakeタスク
