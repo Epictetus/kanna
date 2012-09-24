@@ -23,6 +23,10 @@ module Pera
       def create_www_dir_and_copy_files
         create_base_dir_and_copy_files('app/pera/www/vendor')
       end
+
+      def copy_guard_file
+        copy_file "Guardfile", "Guardfile"
+      end
     private
 
       def create_base_dir_and_copy_files(base)
