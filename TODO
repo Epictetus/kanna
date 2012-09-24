@@ -2,8 +2,6 @@
 TODO
 ----------------------------------------
 
-app/pera の配信
-* config/enviroments/development.rb
 ビルドのrakeタスク
 jsの共通部分の移植
 
@@ -22,3 +20,4 @@ ControllerでのViewのハンドリング
 * ActionView::LookupContext::Details
 app/pera の配信
 * guardの仕組み
+* config/enviroments/development.rb

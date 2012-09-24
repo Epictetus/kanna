@@ -11,6 +11,10 @@ module Pera
       end
 
       Mime::Type.register_alias "text/javascript", :pera
+
+      if Rails.env.development?
+        app.config.middleware.use Rack::Static, urls: ['/www'], root: "app/pera"
+      end
     end
   end
 end
