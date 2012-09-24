@@ -3,7 +3,6 @@ TODO
 ----------------------------------------
 
 app/pera の配信
-* guardの仕組み
 * config/enviroments/development.rb
 ビルドのrakeタスク
 
@@ -20,3 +19,5 @@ DONE
 app/pera のgenerate
 ControllerでのViewのハンドリング
 * ActionView::LookupContext::Details
+app/pera の配信
+* guardの仕組み
