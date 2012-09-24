@@ -2,8 +2,6 @@
 TODO
 ----------------------------------------
 
-jsの共通部分の移植
-
 cookieの保存
 
 rails_ujsのカスタマイズ
@@ -21,3 +19,4 @@ app/pera の配信
 * guardの仕組み
 * config/enviroments/development.rb
 ビルドのrakeタスク
+jsの共通部分の移植
