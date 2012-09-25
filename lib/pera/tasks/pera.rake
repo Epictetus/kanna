@@ -5,7 +5,7 @@ namespace :pera do
     app_name_downcase = app_name.downcase
 
     # FIX: 固定値をやめる。どこになるんだ？
-    cordova_path = File.join('~', 'install', 'phonegap-2.0.0')
+    cordova_path = File.join('~', 'install', 'phonegap-2.1.0')
     ios_bin_path = File.join(cordova_path, 'lib', 'ios', 'bin')
     ios_create_command = File.join(ios_bin_path, 'create')
     ios_project_path = File.join(Rails.root, 'tmp', "#{app_name_downcase}-ios")
@@ -17,7 +17,9 @@ namespace :pera do
       system command
     end
 
-    ios_debug_command = File.join(ios_project_path, 'cordova', 'debug')
+    ios_command_dir = File.join(ios_project_path, 'cordova')
+    ios_debug_command = File.join(ios_command_dir, 'debug')
+    ios_emulate_command = File.join(ios_command_dir, 'emulate')
     pera_app_path = File.join(Rails.root, 'app', 'pera')
     pera_ios_path = File.join(pera_app_path, 'ios')
     pera_www_path = File.join(pera_app_path, 'www')
@@ -28,7 +30,7 @@ namespace :pera do
       cp_www_command = "cp -R #{pera_www_path} #{ios_project_path}"
       cp_config_command = "cp #{pera_ios_path}/* #{ios_config_path}"
       debug_command = "PROJECT_NAME=#{app_name} #{ios_debug_command}"
-      command = [cp_www_command, cp_config_command, debug_command].join("; ")
+      command = [cp_www_command, cp_config_command, debug_command, ios_emulate_command].join("; ")
       puts "DO: #{command}"
       system command
     end
