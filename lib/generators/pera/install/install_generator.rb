@@ -29,10 +29,12 @@ module Pera
       end
 
       def add_guard_to_gemfile
-        gem 'guard-haml', group: :development
-        gem 'guard-sass', group: :development
-        gem 'guard-coffeescript', group: :development
-        gem 'rb-fsevent', group: :development
+        gem_group :development do
+          gem 'guard-haml', require: false
+          gem 'guard-sass', require: false
+          gem 'guard-coffeescript', require: false
+          gem 'rb-fsevent', require: false
+        end
       end
     private
 
