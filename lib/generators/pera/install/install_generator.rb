@@ -27,6 +27,13 @@ module Pera
       def copy_guard_file
         copy_file "Guardfile", "Guardfile"
       end
+
+      def add_guard_to_gemfile
+        gem 'guard-haml', group: :development
+        gem 'guard-sass', group: :development
+        gem 'guard-coffeescript', group: :development
+        gem 'rb-fsevent', group: :development
+      end
     private
 
       def create_base_dir_and_copy_files(base)
