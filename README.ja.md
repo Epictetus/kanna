@@ -55,13 +55,19 @@ pera では guard を使って、haml, coffee-script, sass のソースコード
 
 以下の、rakeコマンドでios用のプロジェクトを生成します。`tmp/#{Appname}-ios`というディレクトリに生成されます。
 
-
     $ rake pera:ios:init
 
 以下のコマンドで`app/pera/www`以下のファイルをプロジェクト内にコンパイルしてアプリのビルドを行います。
 ios-sim コマンドがインストールされている場合は自動的にシュミレータが起動してアプリが動きます。
 
     $ rake pera:ios:build
+
+アプリのデバックについては、通常シュミレータ上で動かす必要がありますが、peraでは開発環境のブラウザ上で
+確認ができます。
+
+    $ rails server 
+
+でサーバを起動して、`http://localhost:3000/www/index.html`にアクセスしてください。ブラウザ上でアプリ相当の画面が動きます。
 
 ## Contributing
 
