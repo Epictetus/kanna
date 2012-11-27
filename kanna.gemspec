@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pera/version'
+require 'kanna/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "pera"
-  gem.version       = Pera::VERSION
+  gem.name          = "kanna"
+  gem.version       = Kanna::VERSION
   gem.authors       = ["Akihiro Matsumura"]
   gem.email         = ["mat_aki@sonicgarden.jp"]
-  gem.description   = %q{Pera connect Rails and Cordova. Pera is framework to create mobile application very simple.}
+  gem.description   = %q{Kanna connect Rails and Cordova. Kanna is framework to create mobile application very simple.}
   gem.summary       = %q{Simple Mobile App Framework for Rails}
   gem.homepage      = ""
 

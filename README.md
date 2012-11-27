@@ -1,13 +1,13 @@
-# Pera
+# Kanna
 
-Pera connects Ruby on Rails with Phonegap the mobile application framework.
-Pera enables us to build mobile applications in Rails-like development style.
+Kanna connects Ruby on Rails with Phonegap the mobile application framework.
+Kanna enables us to build mobile applications in Rails-like development style.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'pera'
+    gem 'kanna'
 
 And then execute:
 
@@ -15,13 +15,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install pera
+    $ gem install kanna
 
 ## Usage
 
 Run the generator,
 
-    $ rails g pera:install
+    $ rails g kanna:install
 
 Run guard
 
@@ -29,11 +29,11 @@ Run guard
 
 Setup ios project,
 
-    $ rake pera:ios:init
+    $ rake kanna:ios:init
 
 Run app on ios, (need to install ios-sim)
 
-    $ rake pera:ios:build
+    $ rake kanna:ios:build
 
 
 ## Contributing

@@ -3,7 +3,7 @@ class ActionView::LookupContext
     if values
       values.concat(default_formats) if values.delete "*/*"
       values << :html if values == [:js]
-      values << :html if values == [:pera]
+      values << :html if values == [:kanna]
     end
     super(values)
   end

@@ -18,7 +18,7 @@ $ ->
 
     settings.crossDomain = true
     xhr.setRequestHeader("Accept", "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript")
-    xhr.setRequestHeader("X-PERA", "v1")
+    xhr.setRequestHeader("X-KANNA", "v1")
     true
 
   reWriteImageSrc = ->
@@ -44,7 +44,7 @@ $ ->
   .live 'ajax:complete', (event, xhr, status) ->
     afterAjaxRequest()
 
-  $.peraGet = (url, callback) ->
+  $.kannaGet = (url, callback) ->
     $.ajax
       type: "GET",
       url: url,

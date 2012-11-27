@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-namespace :pera do
+namespace :kanna do
   namespace :ios do
     app_name = Rails.application.class.name.split("::").first
     app_name_downcase = app_name.downcase
@@ -20,15 +20,15 @@ namespace :pera do
     ios_command_dir = File.join(ios_project_path, 'cordova')
     ios_debug_command = File.join(ios_command_dir, 'debug')
     ios_emulate_command = File.join(ios_command_dir, 'emulate')
-    pera_app_path = File.join(Rails.root, 'app', 'pera')
-    pera_ios_path = File.join(pera_app_path, 'ios')
-    pera_www_path = File.join(pera_app_path, 'www')
+    kanna_app_path = File.join(Rails.root, 'app', 'kanna')
+    kanna_ios_path = File.join(kanna_app_path, 'ios')
+    kanna_www_path = File.join(kanna_app_path, 'www')
     ios_config_path = File.join(ios_project_path, app_name)
 
     desc "build ios app"
     task build: :environment do
-      cp_www_command = "cp -R #{pera_www_path} #{ios_project_path}"
-      cp_config_command = "cp #{pera_ios_path}/* #{ios_config_path}"
+      cp_www_command = "cp -R #{kanna_www_path} #{ios_project_path}"
+      cp_config_command = "cp #{kanna_ios_path}/* #{ios_config_path}"
       debug_command = "PROJECT_NAME=#{app_name} #{ios_debug_command}"
       command = [cp_www_command, cp_config_command, debug_command, ios_emulate_command].join("; ")
       puts "DO: #{command}"

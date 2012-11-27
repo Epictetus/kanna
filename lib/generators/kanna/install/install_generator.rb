@@ -1,27 +1,27 @@
 require 'rails/generators'
 
-module Pera
+module Kanna
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      desc "Copy Pera default files"
+      desc "Copy Kanna default files"
       source_root File.expand_path('../templates', __FILE__)
 
-      def create_app_pera_dir
-        empty_directory Rails.root.join("app/pera")
+      def create_app_kanna_dir
+        empty_directory Rails.root.join("app/kanna")
       end
 
       def create_ios_dir_and_copy_files
-        create_base_dir_and_copy_files('app/pera/ios')
+        create_base_dir_and_copy_files('app/kanna/ios')
       end
 
       def create_src_dir_and_copy_files
-        create_base_dir_and_copy_files("app/pera/src/css")
-        create_base_dir_and_copy_files("app/pera/src/haml")
-        create_base_dir_and_copy_files("app/pera/src/js")
+        create_base_dir_and_copy_files("app/kanna/src/css")
+        create_base_dir_and_copy_files("app/kanna/src/haml")
+        create_base_dir_and_copy_files("app/kanna/src/js")
       end
 
       def create_www_dir_and_copy_files
-        create_base_dir_and_copy_files('app/pera/www/vendor')
+        create_base_dir_and_copy_files('app/kanna/www/vendor')
       end
 
       def copy_guard_file

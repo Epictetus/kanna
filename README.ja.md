@@ -1,6 +1,6 @@
-# Pera
+# Kanna
 
-Pera は Ruby on Rails と Phonegap (Cordova) を繋いで、Railsエンジニアにも簡単に
+Kanna は Ruby on Rails と Phonegap (Cordova) を繋いで、Railsエンジニアにも簡単に
 モバイルアプリを作成することができるようにするフレームワークです。
 Railsでアプリを開発しているのと同じ感覚でモバイルアプリを作れることを目指します。
 
@@ -8,7 +8,7 @@ Railsでアプリを開発しているのと同じ感覚でモバイルアプリ
 
 Gemfileに以下の行を追加してください。
 
-    gem 'pera'
+    gem 'kanna'
 
 で、次を実行
 
@@ -16,7 +16,7 @@ Gemfileに以下の行を追加してください。
 
 generator を実行してください。これで、モバイルアプリを作成する雛形を作ります。
 
-    $ rails g pera:install
+    $ rails g kanna:install
 
 以下の様に、ディレクトリが作成されます。
 
@@ -25,7 +25,7 @@ generator を実行してください。これで、モバイルアプリを作�
 Root
 ├── Guardfile
 └── app
-    └── pera
+    └── kanna
         ├── ios                # ios 用の設定ファイルを配置します。
         │   └── Cordova.plist
         ├── src                # モバイルアプリのソースコード(haml, sass, coffee)を配置します。
@@ -35,7 +35,7 @@ Root
         │   │   └── index.haml
         │   └── js
         │       ├── application.coffee
-        │       └── pera.coffee
+        │       └── kanna.coffee
         └── www                # Cordovaに配置するために生成されるソースコードです。
             ├── index.html     # app/src/haml/index.html から生成されます
             ├── js
@@ -48,24 +48,24 @@ Root
 ````
 
 
-pera では guard を使って、haml, coffee-script, sass のソースコードをコンパイルします。guardを実行してください。
+kanna では guard を使って、haml, coffee-script, sass のソースコードをコンパイルします。guardを実行してください。
 (現状、generateしたファイルのコンパイルは行わないので、一旦src以下のすべてのファイルをtouchしてください。)
 
     $ guard
 
 以下の、rakeコマンドでios用のプロジェクトを生成します。`tmp/#{Appname}-ios`というディレクトリに生成されます。
 
-    $ rake pera:ios:init
+    $ rake kanna:ios:init
 
-以下のコマンドで`app/pera/www`以下のファイルをプロジェクト内にコンパイルしてアプリのビルドを行います。
+以下のコマンドで`app/kanna/www`以下のファイルをプロジェクト内にコンパイルしてアプリのビルドを行います。
 ios-sim コマンドがインストールされている場合は自動的にシュミレータが起動してアプリが動きます。
 
-    $ rake pera:ios:build
+    $ rake kanna:ios:build
 
-アプリのデバックについては、通常シュミレータ上で動かす必要がありますが、peraでは開発環境のブラウザ上で
+アプリのデバックについては、通常シュミレータ上で動かす必要がありますが、kannaでは開発環境のブラウザ上で
 確認ができます。
 
-    $ rails server 
+    $ rails server
 
 でサーバを起動して、`http://localhost:3000/www/index.html`にアクセスしてください。ブラウザ上でアプリ相当の画面が動きます。
 

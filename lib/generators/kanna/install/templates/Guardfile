@@ -1,0 +1,5 @@
+guard "haml", input: "app/kanna/src/haml", output: "app/kanna/www", haml_options: { format: :html5, attr_wrapper: '"', ugly: true } do
+  watch %r{^app\/kanna\/src\/haml\/.+\.haml}
+end
+guard "sass", input: "app/kanna/src/css", output: "app/kanna/www/css"
+guard "coffeescript", input: "app/kanna/src/js", output: "app/kanna/www/js", bare: true

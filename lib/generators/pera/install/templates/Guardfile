@@ -1,5 +1,0 @@
-guard "haml", input: "app/pera/src/haml", output: "app/pera/www", haml_options: { format: :html5, attr_wrapper: '"', ugly: true } do
-  watch %r{^app\/pera\/src\/haml\/.+\.haml}
-end
-guard "sass", input: "app/pera/src/css", output: "app/pera/www/css"
-guard "coffeescript", input: "app/pera/src/js", output: "app/pera/www/js", bare: true
