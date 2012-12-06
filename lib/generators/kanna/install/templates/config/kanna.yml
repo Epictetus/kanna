@@ -1,0 +1,15 @@
+#
+# kanna common settings
+# common:
+#   cordova_path: <Your cordova installation path>
+#
+common:
+  cordova_path: '~/phonegap/phonegap-2.2.0'
+
+#
+# kanna ios settings
+# ios:
+#   bundle_id: <Bundle identifier of your app>
+#
+ios:
+  bundle_id: 'com.kanna.yourappname'

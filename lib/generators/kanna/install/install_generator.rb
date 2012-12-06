@@ -36,6 +36,11 @@ module Kanna
           gem 'rb-fsevent', require: false
         end
       end
+
+      def copy_kanna_config_file
+        copy_file "config/kanna.yml"
+      end
+
     private
 
       def create_base_dir_and_copy_files(base)

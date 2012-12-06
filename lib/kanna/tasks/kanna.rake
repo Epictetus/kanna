@@ -1,18 +1,29 @@
 # -*- coding: utf-8 -*-
 namespace :kanna do
+  config_path = File.join(Rails.root, 'config', 'kanna.yml')
+  config = YAML.load(File.read(config_path))
+  cordova_path = config["common"] && config["common"]["cordova_path"]
+  if cordova_path.blank?
+    puts "You have to specify cordova path at config/kanna.yml"
+    abort
+  end
+
   namespace :ios do
     app_name = Rails.application.class.name.split("::").first
     app_name_downcase = app_name.downcase
 
-    # FIX: 固定値をやめる。どこになるんだ？
-    cordova_path = File.join('~', 'install', 'phonegap-2.1.0')
     ios_bin_path = File.join(cordova_path, 'lib', 'ios', 'bin')
     ios_create_command = File.join(ios_bin_path, 'create')
     ios_project_path = File.join(Rails.root, 'tmp', "#{app_name_downcase}-ios")
 
     desc "create ios project"
     task init: :environment do
-      command = "#{ios_create_command} #{ios_project_path} com.keepintouchapp.ios #{app_name}"
+      bundle_id = config["ios"] && config["ios"]["bundle_id"]
+      if bundle_id.blank?
+        puts "You have to specify bundle identifier for iOS application at config/kanna.yml"
+        abort
+      end
+      command = "#{ios_create_command} #{ios_project_path} #{bundle_id} #{app_name}"
       puts "DO: #{command}"
       system command
     end
