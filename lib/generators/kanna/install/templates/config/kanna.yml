@@ -4,7 +4,7 @@
 #   cordova_path: <Your cordova installation path>
 #
 common:
-  cordova_path: '~/phonegap/phonegap-2.2.0'
+  cordova_path: '~/phonegap/phonegap-2.3.0'
 
 #
 # kanna ios settings

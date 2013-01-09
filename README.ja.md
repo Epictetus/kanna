@@ -41,8 +41,8 @@ Root
             ├── js
             ├── css
             └── vendor
-                ├── cordova-2.1.0.js
-                ├── jquery-1.8.1.min.js
+                ├── cordova-2.3.0.js
+                ├── jquery-1.8.3.min.js
                 ├── json2.js
                 └── rails_ujs_custom.js
 ````
