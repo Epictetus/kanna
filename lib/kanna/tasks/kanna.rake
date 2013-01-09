@@ -29,8 +29,8 @@ namespace :kanna do
     end
 
     ios_command_dir = File.join(ios_project_path, 'cordova')
-    ios_debug_command = File.join(ios_command_dir, 'debug')
-    ios_emulate_command = File.join(ios_command_dir, 'emulate')
+    ios_build_command = File.join(ios_command_dir, 'build')
+    ios_run_command = File.join(ios_command_dir, 'run')
     kanna_app_path = File.join(Rails.root, 'app', 'kanna')
     kanna_ios_path = File.join(kanna_app_path, 'ios')
     kanna_www_path = File.join(kanna_app_path, 'www')
@@ -40,8 +40,7 @@ namespace :kanna do
     task build: :environment do
       cp_www_command = "cp -R #{kanna_www_path} #{ios_project_path}"
       cp_config_command = "cp #{kanna_ios_path}/* #{ios_config_path}"
-      debug_command = "PROJECT_NAME=#{app_name} #{ios_debug_command}"
-      command = [cp_www_command, cp_config_command, debug_command, ios_emulate_command].join("; ")
+      command = [cp_www_command, cp_config_command, ios_build_command, ios_run_command].join("; ")
       puts "DO: #{command}"
       system command
     end
