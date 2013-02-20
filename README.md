@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/SonicGarden/kanna.png)](https://gemnasium.com/SonicGarden/kanna)
+
 # Kanna
 
 Kanna connects Ruby on Rails with Phonegap the mobile application framework.

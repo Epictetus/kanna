@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/SonicGarden/kanna.png)](https://gemnasium.com/SonicGarden/kanna)
+
 # Kanna
 
 Kanna は Ruby on Rails と Phonegap (Cordova) を繋いで、Railsエンジニアにも簡単に
